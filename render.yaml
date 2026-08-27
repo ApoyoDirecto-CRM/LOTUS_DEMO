@@ -1,0 +1,6 @@
+services:
+  - type: static_site
+    name: lotus-demo
+    runtime: static
+    buildCommand: echo "Static site - no build needed"
+    staticPublishPath: .

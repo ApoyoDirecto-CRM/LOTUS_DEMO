@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lotus Travel — Agencia de viajes. Destinos nacionales e internacionales, paquetes todo incluido, viajes corporativos." />
+  <title>Lotus Travel — Agencia de Viajes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/styles.css?v=8" />
+</head>
+<body id="inicio">
+
+  <!-- ================= INTRO ================= -->
+  <div class="intro" id="intro">
+    <div class="intro__bg" aria-hidden="true">
+      <div class="intro__bg-layer is-visible" id="introBg0"></div>
+      <div class="intro__bg-layer" id="introBg1"></div>
+    </div>
+    <div class="intro__stage">
+      <svg id="logo" viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lotus Travel">
+        <defs>
+          <clipPath id="wordClip">
+            <rect x="0" y="0" width="620" height="230"/>
+          </clipPath>
+          <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#ffffff" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <g font-family="'Cormorant Garamond', serif" font-weight="600" font-size="118" fill="#132C46">
+          <text class="letter l1" x="30"  y="175">L</text>
+          <text class="letter l3" x="255" y="175">T</text>
+          <text class="letter l4" x="335" y="175">U</text>
+          <text class="letter l5" x="425" y="175">S</text>
+        </g>
+
+        <g transform="translate(190,128) scale(1.28)">
+          <g class="icon-lotus">
+            <path class="petal p3" d="M0,-46 C10,-30 14,-10 0,4 C-14,-10 -10,-30 0,-46 Z"/>
+            <path class="petal p2" d="M-32,-22 C-16,-16 -4,-2 -3,16 C-21,14 -34,2 -32,-22 Z"/>
+            <path class="petal p4" d="M32,-22 C16,-16 4,-2 3,16 C21,14 34,2 32,-22 Z"/>
+            <path class="petal p1" d="M-46,10 C-26,4 -10,10 -3,26 C-22,34 -42,28 -46,10 Z"/>
+            <path class="petal p5" d="M46,10 C26,4 10,10 3,26 C22,34 42,28 46,10 Z"/>
+            <path class="plane" fill="#F3F4F4" d="M0,-30 L4,-6 L26,10 L26,15 L4,8 L2,26 L10,34 L10,38 L0,35 L-10,38 L-10,34 L-2,26 L-4,8 L-26,15 L-26,10 L-4,-6 Z"/>
+          </g>
+        </g>
+
+        <text class="sub" x="310" y="230" text-anchor="middle"
+              font-family="'Cormorant Garamond', serif" font-style="italic" font-weight="500" font-size="32"
+              letter-spacing="4" fill="#132C46">Viajamos contigo</text>
+
+        <line class="underline" x1="205" y1="252" x2="415" y2="252"/>
+
+        <g clip-path="url(#wordClip)">
+          <rect class="shine" x="0" y="0" width="90" height="260" fill="url(#shineGrad)"/>
+        </g>
+      </svg>
+
+      <p class="intro__question">¿Qué lugar vamos a conocer?</p>
+
+      <div class="intro__carousel" aria-hidden="true">
+        <div class="intro__track"></div>
+      </div>
+
+      <button class="intro__cta" type="button">Descubrir destinos</button>
+    </div>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <a href="#inicio" class="logo-mark" aria-label="Lotus Travel — Inicio">
+      <svg viewBox="-52 -52 104 90" xmlns="http://www.w3.org/2000/svg" class="logo-mark__svg" aria-hidden="true">
+        <path class="petal-logo" d="M0,-46 C10,-30 14,-10 0,4 C-14,-10 -10,-30 0,-46 Z"/>
+        <path class="petal-logo" d="M-32,-22 C-16,-16 -4,-2 -3,16 C-21,14 -34,2 -32,-22 Z"/>
+        <path class="petal-logo" d="M32,-22 C16,-16 4,-2 3,16 C21,14 34,2 32,-22 Z"/>
+        <path class="petal-logo" d="M-46,10 C-26,4 -10,10 -3,26 C-22,34 -42,28 -46,10 Z"/>
+        <path class="petal-logo" d="M46,10 C26,4 10,10 3,26 C22,34 42,28 46,10 Z"/>
+        <path class="plane-logo" fill="#132C46" d="M0,-30 L4,-6 L26,10 L26,15 L4,8 L2,26 L10,34 L10,38 L0,35 L-10,38 L-10,34 L-2,26 L-4,8 L-26,15 L-26,10 L-4,-6 Z"/>
+      </svg>
+    </a>
+
+    <nav class="site-nav" aria-label="Navegación principal">
+      <ul class="site-nav__list">
+        <li><a href="#inicio" class="site-nav__link is-active">Inicio</a></li>
+        <li><a href="#tipos" class="site-nav__link">Viajes</a></li>
+        <li><a href="#paquetes" class="site-nav__link">Paquetes</a></li>
+        <li><a href="#servicios" class="site-nav__link">Servicios</a></li>
+        <li><a href="#corporativo" class="site-nav__link">Corporativo</a></li>
+        <li><a href="#contacto" class="site-nav__link">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero__background" aria-hidden="true">
+        <div class="hero__bg-layer is-visible" style="background-image:url('https://lotustravel.com.mx/wp-content/uploads/2020/04/hero-1.jpg')"></div>
+        <div class="hero__bg-layer"></div>
+      </div>
+
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__info">
+          <span class="hero__country">Cancún</span>
+          <h1 class="hero__title">Cancún &amp;<br />Riviera Maya</h1>
+          <p class="hero__description">
+            Hospedaje + Plan Todo Incluido + Traslados. 4 días y 3 noches para toda la familia.
+            Aparta desde $500 pesos.
+          </p>
+
+          <div class="hero__actions">
+            <button class="btn-bookmark" aria-label="Guardar destino en favoritos">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"
+                      fill="none" stroke="currentColor" stroke-width="1.5"
+                      stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <a href="#paquetes" class="btn-pill">
+              Ver Paquetes
+              <span class="btn-pill__arrow" aria-hidden="true">&#8594;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="carousel" id="destinos">
+          <div class="swiper destination-swiper">
+            <div class="swiper-wrapper"></div>
+          </div>
+
+          <div class="carousel__controls">
+            <button class="carousel-btn carousel-btn--prev" aria-label="Destino anterior">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="carousel-btn carousel-btn--next" aria-label="Siguiente destino">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="carousel__progress" role="progressbar" aria-label="Progreso del carrusel">
+              <span class="carousel__progress-fill"></span>
+            </div>
+
+            <p class="carousel__counter">
+              <span class="counter-current">01</span>
+              <span class="counter-separator">/</span>
+              <span class="counter-total">06</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TIPOS DE VIAJE ================= -->
+    <section class="section section--dark" id="tipos">
+      <div class="section__inner">
+        <h2 class="section__title">¿Qué tipo de viaje buscas?</h2>
+        <p class="section__subtitle">Tenemos el paquete perfecto para cada ocasión</p>
+
+        <div class="travel-types">
+          <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="travel-type glass-card" target="_blank" rel="noopener">
+            <div class="travel-type__icon">
+              <svg viewBox="0 0 24 24" width="36" height="36"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="travel-type__title">Familiares</h3>
+            <p class="travel-type__text">Para toda la familia con niños. Resorts con clubes infantiles, piscinas y entretenimiento.</p>
+          </a>
+
+          <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="travel-type glass-card" target="_blank" rel="noopener">
+            <div class="travel-type__icon">
+              <svg viewBox="0 0 24 24" width="36" height="36"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="travel-type__title">Románticos</h3>
+            <p class="travel-type__text">Escapadas en pareja. Hoteles boutique, cenas privadas y experiencias exclusivas.</p>
+          </a>
+
+          <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="travel-type glass-card" target="_blank" rel="noopener">
+            <div class="travel-type__icon">
+              <svg viewBox="0 0 24 24" width="36" height="36"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="travel-type__title">Solteros</h3>
+            <p class="travel-type__text">Viajes grupales para solteros. Playa, fiesta y diversión sin límites.</p>
+          </a>
+
+          <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="travel-type glass-card" target="_blank" rel="noopener">
+            <div class="travel-type__icon">
+              <svg viewBox="0 0 24 24" width="36" height="36"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="travel-type__title">Aventura</h3>
+            <p class="travel-type__text">Excursiones, deportes extremos y exploración. Vive la adrenalina al máximo.</p>
+          </a>
+
+          <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="travel-type glass-card" target="_blank" rel="noopener">
+            <div class="travel-type__icon">
+              <svg viewBox="0 0 24 24" width="36" height="36"><path d="M15.49 9.63c-.18-2.79-1.31-5.51-3.43-7.63-2.14 2.14-3.32 4.86-3.55 7.63 1.28.68 2.46 1.56 3.49 2.63 1.03-1.06 2.21-1.94 3.49-2.63zm-6.5 2.65c-.14-.1-.3-.19-.46-.27-.58-.3-1.14-.66-1.67-1.07-.75-.57-1.42-1.27-1.99-2.04C8.34 8.15 7.83 7.15 7.5 6.09c-.27-.86-.43-1.76-.46-2.68 0-.07-.01-.13-.02-.2C5.35 4.27 3.73 6.28 3.08 8.63c-.69 2.49-.31 5.13.79 7.29.54 1.06 1.23 2.03 2.03 2.88.43.45.89.86 1.37 1.23.24.19.49.36.75.51.09.05.18.1.28.14l.17.06c.15.04.3.07.46.07s.31-.03.46-.07l.17-.06c.09-.04.18-.09.28-.14.26-.15.51-.32.75-.51.48-.37.94-.78 1.37-1.23.8-.85 1.49-1.82 2.03-2.88 1.1-2.16 1.48-4.8.79-7.29-.65-2.35-2.27-4.36-4.54-5.42-.01.07-.02.13-.02.2-.03.92-.19 1.82-.46 2.68-.33 1.06-.84 2.06-1.48 2.92-.57.77-1.24 1.47-1.99 2.04-.53.41-1.09.77-1.67 1.07-.16.08-.32.17-.46.27z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="travel-type__title">Relax</h3>
+            <p class="travel-type__text">Desconexión total. Spas, playas privadas y momentos de pura tranquilidad.</p>
+          </a>
+
+          <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="travel-type glass-card" target="_blank" rel="noopener">
+            <div class="travel-type__icon">
+              <svg viewBox="0 0 24 24" width="36" height="36"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="travel-type__title">Grupales</h3>
+            <p class="travel-type__text">Viajes organizados para grupos. Familias, amigos o compañeros de trabajo.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PAQUETES ================= -->
+    <section class="section" id="paquetes">
+      <div class="section__inner">
+        <h2 class="section__title">Paquetes Todo Incluido</h2>
+        <p class="section__subtitle">4 días y 3 noches · Hospedaje + Plan Todo Incluido + Traslados (A-H-A)</p>
+        <p class="section__note">Aparta desde <strong>$500 pesos</strong> + Vuelos · Liquidar semanas antes de viajar · Meses Sin Intereses</p>
+
+        <div class="packages">
+          <!-- CANCÚN -->
+          <div class="package glass-card">
+            <div class="package__image">
+              <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/IBEROSTAR-1.webp" alt="Cancún" loading="lazy" />
+            </div>
+            <div class="package__content">
+              <h3 class="package__title">Cancún & Riviera Maya</h3>
+              <p class="package__subtitle">Para toda la familia</p>
+              <p class="package__flight-note">*No incluye vuelos desde tu ciudad de origen</p>
+              <div class="package__hotels">
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Dos Playas Faranda</span>
+                  <span class="package__hotel-price">$10,467</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Grand Oasis Palm</span>
+                  <span class="package__hotel-price">$14,591</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Emporio</span>
+                  <span class="package__hotel-price">$16,403</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Iberostar Selection</span>
+                  <span class="package__hotel-price">$17,792</span>
+                </div>
+              </div>
+              <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="btn-pill btn-pill--small" target="_blank" rel="noopener">
+                Reservar
+                <span class="btn-pill__arrow" aria-hidden="true">&#8594;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- LOS CABOS -->
+          <div class="package glass-card">
+            <div class="package__image">
+              <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/RIU-SANTA-FE-1.webp" alt="Los Cabos" loading="lazy" />
+            </div>
+            <div class="package__content">
+              <h3 class="package__title">Los Cabos</h3>
+              <p class="package__subtitle">Para toda la familia</p>
+              <p class="package__flight-note">*No incluye vuelos desde tu ciudad de origen</p>
+              <div class="package__hotels">
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Posada Real</span>
+                  <span class="package__hotel-price">$10,910</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Royal Solaris</span>
+                  <span class="package__hotel-price">$13,914</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">RIU Santa Fe</span>
+                  <span class="package__hotel-price">$15,355</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Dreams</span>
+                  <span class="package__hotel-price">$22,676</span>
+                </div>
+              </div>
+              <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="btn-pill btn-pill--small" target="_blank" rel="noopener">
+                Reservar
+                <span class="btn-pill__arrow" aria-hidden="true">&#8594;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- HUATULCO -->
+          <div class="package glass-card">
+            <div class="package__image">
+              <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/LAS-BRISAS-1.webp" alt="Huatulco" loading="lazy" />
+            </div>
+            <div class="package__content">
+              <h3 class="package__title">Huatulco</h3>
+              <p class="package__subtitle">Para toda la familia</p>
+              <p class="package__flight-note">*No incluye vuelos desde tu ciudad de origen</p>
+              <div class="package__hotels">
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Binniguenda</span>
+                  <span class="package__hotel-price">$11,105</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Coral Blue</span>
+                  <span class="package__hotel-price">$11,625</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Las Brisas</span>
+                  <span class="package__hotel-price">$13,825</span>
+                </div>
+                <div class="package__hotel">
+                  <span class="package__hotel-name">Dreams</span>
+                  <span class="package__hotel-price">$17,241</span>
+                </div>
+              </div>
+              <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="btn-pill btn-pill--small" target="_blank" rel="noopener">
+                Reservar
+                <span class="btn-pill__arrow" aria-hidden="true">&#8594;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section class="section section--dark" id="servicios">
+      <div class="section__inner">
+        <h2 class="section__title">Nuestros Servicios</h2>
+        <p class="section__subtitle">Todo lo que necesitas para un viaje perfecto</p>
+
+        <div class="features">
+          <div class="feature glass-card">
+            <div class="feature__icon feature__icon--travel">
+              <svg viewBox="0 0 64 64" width="56" height="56">
+                <circle cx="32" cy="32" r="30" fill="none" stroke="#132C46" stroke-width="1.5" opacity="0.15"/>
+                <path d="M48 28l-16-8V12c0-1.65-1.35-3-3-3s-3 1.35-3 3v8L12 28v4l14-4.5V38l-4 3V43l6-2 6 2v-2l-4-3V27.5L48 32v-4z" fill="#132C46"/>
+                <circle cx="18" cy="48" r="2" fill="#c8a96a" opacity="0.6"/>
+                <circle cx="46" cy="16" r="1.5" fill="#c8a96a" opacity="0.4"/>
+                <circle cx="52" cy="44" r="1" fill="#132C46" opacity="0.2"/>
+              </svg>
+            </div>
+            <h3 class="feature__title">Vuelos</h3>
+            <p class="feature__text">Vuelos nacionales e internacionales con las mejores aerolíneas. Paquetes con vuelos incluidos.</p>
+          </div>
+
+          <div class="feature glass-card">
+            <div class="feature__icon feature__icon--travel">
+              <svg viewBox="0 0 64 64" width="56" height="56">
+                <circle cx="32" cy="32" r="30" fill="none" stroke="#132C46" stroke-width="1.5" opacity="0.15"/>
+                <rect x="16" y="24" width="32" height="20" rx="3" fill="none" stroke="#132C46" stroke-width="2"/>
+                <rect x="20" y="28" width="8" height="6" rx="1" fill="#c8a96a" opacity="0.5"/>
+                <rect x="30" y="28" width="8" height="6" rx="1" fill="#c8a96a" opacity="0.5"/>
+                <rect x="40" y="28" width="4" height="6" rx="1" fill="#c8a96a" opacity="0.3"/>
+                <line x1="16" y1="36" x2="48" y2="36" stroke="#132C46" stroke-width="1" opacity="0.3"/>
+                <path d="M24 24V18c0-1 0.5-2 1.5-2h13c1 0 1.5 1 1.5 2v6" fill="none" stroke="#132C46" stroke-width="1.5"/>
+                <circle cx="32" cy="40" r="2" fill="#132C46" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="feature__title">Hoteles</h3>
+            <p class="feature__text">Hoteles y resorts 5 estrellas. Marriott, Hyatt, Iberostar, Hard Rock, Dreams y más.</p>
+          </div>
+
+          <div class="feature glass-card">
+            <div class="feature__icon feature__icon--travel">
+              <svg viewBox="0 0 64 64" width="56" height="56">
+                <circle cx="32" cy="32" r="30" fill="none" stroke="#132C46" stroke-width="1.5" opacity="0.15"/>
+                <rect x="14" y="30" width="36" height="14" rx="4" fill="none" stroke="#132C46" stroke-width="2"/>
+                <circle cx="22" cy="44" r="5" fill="none" stroke="#132C46" stroke-width="2"/>
+                <circle cx="22" cy="44" r="2" fill="#c8a96a"/>
+                <circle cx="42" cy="44" r="5" fill="none" stroke="#132C46" stroke-width="2"/>
+                <circle cx="42" cy="44" r="2" fill="#c8a96a"/>
+                <path d="M18 30V24c0-1 0.5-2 2-2h24c1.5 0 2 1 2 2v6" fill="none" stroke="#132C46" stroke-width="1.5"/>
+                <line x1="32" y1="26" x2="32" y2="30" stroke="#132C46" stroke-width="1.5"/>
+                <path d="M10 38l4-4m40 4l-4-4" stroke="#c8a96a" stroke-width="1.5" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3 class="feature__title">Traslados</h3>
+            <p class="feature__text">Traslados aeropuerto-hotel-aeropuerto (A-H-A) incluidos en todos nuestros paquetes.</p>
+          </div>
+
+          <div class="feature glass-card">
+            <div class="feature__icon feature__icon--travel">
+              <svg viewBox="0 0 64 64" width="56" height="56">
+                <circle cx="32" cy="32" r="30" fill="none" stroke="#132C46" stroke-width="1.5" opacity="0.15"/>
+                <path d="M20 42c0-6.63 5.37-12 12-12s12 5.37 12 12" fill="none" stroke="#132C46" stroke-width="2"/>
+                <path d="M24 42c0-4.42 3.58-8 8-8s8 3.58 8 8" fill="none" stroke="#c8a96a" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="32" cy="26" r="4" fill="none" stroke="#132C46" stroke-width="2"/>
+                <path d="M16 46h32" stroke="#132C46" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <path d="M22 20l-4-4m24 4l4-4" stroke="#c8a96a" stroke-width="1.5" opacity="0.4"/>
+                <path d="M32 16v-4" stroke="#132C46" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="feature__title">Todo Incluido</h3>
+            <p class="feature__text">Plan de alimentos y bebidas ilimitadas. Disfruta sin preocupaciones en los mejores resorts.</p>
+          </div>
+
+          <div class="feature glass-card">
+            <div class="feature__icon feature__icon--travel">
+              <svg viewBox="0 0 64 64" width="56" height="56">
+                <circle cx="32" cy="32" r="30" fill="none" stroke="#132C46" stroke-width="1.5" opacity="0.15"/>
+                <rect x="16" y="20" width="32" height="22" rx="3" fill="none" stroke="#132C46" stroke-width="2"/>
+                <line x1="16" y1="28" x2="48" y2="28" stroke="#132C46" stroke-width="1.5"/>
+                <rect x="20" y="32" width="10" height="4" rx="1" fill="#c8a96a" opacity="0.4"/>
+                <text x="32" y="42" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7" font-weight="700" fill="#132C46">MSI</text>
+                <circle cx="44" cy="16" r="6" fill="#c8a96a" opacity="0.15"/>
+                <text x="44" y="18.5" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7" font-weight="700" fill="#c8a96a">$</text>
+              </svg>
+            </div>
+            <h3 class="feature__title">MSI</h3>
+            <p class="feature__text">Meses Sin Intereses con tarjetas de crédito. Mastercard, Visa, American Express y más.</p>
+          </div>
+
+          <div class="feature glass-card">
+            <div class="feature__icon feature__icon--travel">
+              <svg viewBox="0 0 64 64" width="56" height="56">
+                <circle cx="32" cy="32" r="30" fill="none" stroke="#132C46" stroke-width="1.5" opacity="0.15"/>
+                <path d="M20 18c-3 0-6 3-6 6v16c0 3 3 6 6 6h24c3 0 6-3 6-6V24c0-3-3-6-6-6H20z" fill="none" stroke="#132C46" stroke-width="2"/>
+                <path d="M22 22h20" stroke="#c8a96a" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="32" cy="32" r="3" fill="none" stroke="#132C46" stroke-width="1.5"/>
+                <path d="M32 29v6" stroke="#132C46" stroke-width="1.5"/>
+                <path d="M28 14l4-4 4 4" stroke="#132C46" stroke-width="1.5" fill="none"/>
+                <path d="M32 10v12" stroke="#132C46" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="feature__title">Contacto</h3>
+            <p class="feature__text">WhatsApp: 55 6602 2897 · Atención Lun-Vie 9am-6pm, Sáb 9am-3pm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= POR QUE ELEGIRNOS ================= -->
+    <section class="section" id="porque">
+      <div class="section__inner">
+        <h2 class="section__title">¿Por qué Lotus Travel?</h2>
+        <p class="section__subtitle">Más de 100 destinos nacionales e internacionales</p>
+
+        <div class="benefits">
+          <div class="benefit glass-card">
+            <div class="benefit__illustration">
+              <svg viewBox="0 0 80 80" width="64" height="64">
+                <circle cx="40" cy="40" r="38" fill="#132C46" opacity="0.06"/>
+                <circle cx="40" cy="28" r="8" fill="none" stroke="#132C46" stroke-width="2"/>
+                <path d="M24 52c0-8.84 7.16-16 16-16s16 7.16 16 16" fill="none" stroke="#132C46" stroke-width="2"/>
+                <path d="M52 20l4-4m0 0v4m0-4h-4" stroke="#c8a96a" stroke-width="1.5"/>
+                <circle cx="56" cy="56" r="4" fill="#c8a96a" opacity="0.2"/>
+                <path d="M54 56l2 2 4-4" stroke="#c8a96a" stroke-width="1.5" fill="none"/>
+              </svg>
+            </div>
+            <h3 class="benefit__title">Atención Personalizada</h3>
+            <p class="benefit__text">Asesores dedicados que conocen cada destino. Te ayudamos a planear el viaje perfecto según tus necesidades.</p>
+          </div>
+
+          <div class="benefit glass-card">
+            <div class="benefit__illustration">
+              <svg viewBox="0 0 80 80" width="64" height="64">
+                <circle cx="40" cy="40" r="38" fill="#132C46" opacity="0.06"/>
+                <circle cx="40" cy="36" r="12" fill="none" stroke="#132C46" stroke-width="2"/>
+                <text x="40" y="40" text-anchor="middle" font-family="'Inter',sans-serif" font-size="12" font-weight="700" fill="#132C46">$</text>
+                <path d="M28 56h24" stroke="#c8a96a" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <text x="40" y="64" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7" font-weight="600" fill="#c8a96a">DESDE $500</text>
+              </svg>
+            </div>
+            <h3 class="benefit__title">Precios Competitivos</h3>
+            <p class="benefit__text">Aparta desde $500 pesos. Meses Sin Intereses con todas las tarjetas principales.</p>
+          </div>
+
+          <div class="benefit glass-card">
+            <div class="benefit__illustration">
+              <svg viewBox="0 0 80 80" width="64" height="64">
+                <circle cx="40" cy="40" r="38" fill="#132C46" opacity="0.06"/>
+                <path d="M40 18l-18 8v12c0 11 7.7 21.4 18 24 10.3-2.6 18-13 18-24V26L40 18z" fill="none" stroke="#132C46" stroke-width="2"/>
+                <path d="M32 40l5 5 11-11" stroke="#c8a96a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="benefit__title">Seguridad y Confianza</h3>
+            <p class="benefit__text">Agencia autorizada por SECTUR. Respaldada por SAT, Profeco y las mejores cadenas hoteleras.</p>
+          </div>
+
+          <div class="benefit glass-card">
+            <div class="benefit__illustration">
+              <svg viewBox="0 0 80 80" width="64" height="64">
+                <circle cx="40" cy="40" r="38" fill="#132C46" opacity="0.06"/>
+                <circle cx="40" cy="40" r="14" fill="none" stroke="#132C46" stroke-width="2"/>
+                <line x1="40" y1="30" x2="40" y2="40" stroke="#132C46" stroke-width="2" stroke-linecap="round"/>
+                <line x1="40" y1="40" x2="48" y2="44" stroke="#c8a96a" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="40" cy="40" r="2" fill="#132C46"/>
+                <text x="40" y="64" text-anchor="middle" font-family="'Inter',sans-serif" font-size="7" font-weight="600" fill="#c8a96a">24/7</text>
+              </svg>
+            </div>
+            <h3 class="benefit__title">Asistencia 24/7</h3>
+            <p class="benefit__text">Estamos contigo antes, durante y después de tu viaje. Soporte por WhatsApp en todo momento.</p>
+          </div>
+
+          <div class="benefit glass-card">
+            <div class="benefit__illustration">
+              <svg viewBox="0 0 80 80" width="64" height="64">
+                <circle cx="40" cy="40" r="38" fill="#132C46" opacity="0.06"/>
+                <path d="M24 44c0-4 3-7 7-7h18c4 0 7 3 7 7v4H24v-4z" fill="none" stroke="#132C46" stroke-width="2"/>
+                <circle cx="30" cy="32" r="5" fill="none" stroke="#132C46" stroke-width="1.5"/>
+                <circle cx="50" cy="32" r="5" fill="none" stroke="#132C46" stroke-width="1.5"/>
+                <path d="M20 52l6-6m28 6l-6-6" stroke="#c8a96a" stroke-width="1.5" opacity="0.5"/>
+                <path d="M36 24l4-6 4 6" stroke="#c8a96a" stroke-width="1.5" fill="none"/>
+              </svg>
+            </div>
+            <h3 class="benefit__title">Experiencia Comprobada</h3>
+            <p class="benefit__text">Miles de viajeros satisfechos. Testimonios reales de clientes que confían en nosotros.</p>
+          </div>
+
+          <div class="benefit glass-card">
+            <div class="benefit__illustration">
+              <svg viewBox="0 0 80 80" width="64" height="64">
+                <circle cx="40" cy="40" r="38" fill="#132C46" opacity="0.06"/>
+                <rect x="22" y="24" width="16" height="32" rx="2" fill="none" stroke="#132C46" stroke-width="1.5"/>
+                <rect x="42" y="24" width="16" height="32" rx="2" fill="none" stroke="#132C46" stroke-width="1.5"/>
+                <path d="M26 32h8M26 38h8M26 44h8" stroke="#c8a96a" stroke-width="1" opacity="0.4"/>
+                <path d="M46 32h8M46 38h8M46 44h8" stroke="#c8a96a" stroke-width="1" opacity="0.4"/>
+                <path d="M38 40h4" stroke="#132C46" stroke-width="1.5" stroke-dasharray="2 1"/>
+              </svg>
+            </div>
+            <h3 class="benefit__title">Paquetes Flexibles</h3>
+            <p class="benefit__text">Personalizamos tu viaje. Vuelos, hoteles, traslados y tours separados o en paquete.</p>
+          </div>
+        </div>
+
+        <!-- Logos de confianza integrados -->
+        <div class="trust-inline">
+          <p class="trust-inline__label">Respaldados por</p>
+          <div class="trust-inline__logos">
+            <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/SECTUR.webp" alt="SECTUR" loading="lazy" />
+            <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/ProfecoLogo.webp" alt="Profeco" loading="lazy" />
+            <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/4599539.png" alt="SAT" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIAJES CORPORATIVOS ================= -->
+    <section class="section section--dark" id="corporativo">
+      <div class="section__inner">
+        <h2 class="section__title">Viajes Corporativos</h2>
+        <p class="section__subtitle">Gestión completa para empresas, eventos y convenciones</p>
+
+        <div class="corporate-grid">
+          <div class="corporate-card glass-card">
+            <div class="corporate-card__icon">
+              <svg viewBox="0 0 24 24" width="32" height="32"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="corporate-card__title">Eventos y Convenciones</h3>
+            <p class="corporate-card__text">Coordinación completa para congresos, reuniones corporativas y eventos especiales.</p>
+          </div>
+
+          <div class="corporate-card glass-card">
+            <div class="corporate-card__icon">
+              <svg viewBox="0 0 24 24" width="32" height="32"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="corporate-card__title">Viajes de Incentivo</h3>
+            <p class="corporate-card__text">Team building, premios y programas de motivación para tu equipo de trabajo.</p>
+          </div>
+
+          <div class="corporate-card glass-card">
+            <div class="corporate-card__icon">
+              <svg viewBox="0 0 24 24" width="32" height="32"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="corporate-card__title">Convenios Corporativos</h3>
+            <p class="corporate-card__text">Tarifas especiales, facturación y reportes para empresas. Staff en sitio.</p>
+          </div>
+
+          <div class="corporate-card glass-card">
+            <div class="corporate-card__icon">
+              <svg viewBox="0 0 24 24" width="32" height="32"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="corporate-card__title">Garantía Total</h3>
+            <p class="corporate-card__text">Cancelación flexible, seguro de viaje premium y asistencia 24/7 en cada destino.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MÉTODOS DE PAGO ================= -->
+    <section class="section" id="pago">
+      <div class="section__inner">
+        <h2 class="section__title">Métodos de Pago</h2>
+        <p class="section__subtitle">Aceptamos todas las tarjetas principales y ofrecemos Meses Sin Intereses</p>
+
+        <div class="payment-methods">
+          <div class="payment-card glass-card">
+            <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Mastercard-logo.webp" alt="Mastercard" loading="lazy" />
+            <span class="payment-card__label">MSI</span>
+          </div>
+
+          <div class="payment-card glass-card">
+            <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/visa-logo-preview.webp" alt="Visa" loading="lazy" />
+            <span class="payment-card__label">MSI</span>
+          </div>
+
+          <div class="payment-card glass-card">
+            <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/American-Express-Logo-PNG-Transparent-Image.webp" alt="American Express" loading="lazy" />
+            <span class="payment-card__label">MSI</span>
+          </div>
+
+          <div class="payment-card glass-card">
+            <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/openpay-color.webp" alt="Openpay" loading="lazy" />
+            <span class="payment-card__label">MSI</span>
+          </div>
+        </div>
+
+        <div class="payment-info glass-card">
+          <h3 class="payment-info__title">¿Cómo funciona?</h3>
+          <div class="payment-info__steps">
+            <div class="payment-info__step">
+              <span class="payment-info__step-num">1</span>
+              <p class="payment-info__step-text">Aparta tu viaje desde <strong>$500 pesos</strong></p>
+            </div>
+            <div class="payment-info__step">
+              <span class="payment-info__step-num">2</span>
+              <p class="payment-info__step-text">Elige tu destino y hotel con tu asesor</p>
+            </div>
+            <div class="payment-info__step">
+              <span class="payment-info__step-num">3</span>
+              <p class="payment-info__step-text">Paga con tu tarjeta y elige MSI</p>
+            </div>
+            <div class="payment-info__step">
+              <span class="payment-info__step-num">4</span>
+              <p class="payment-info__step-text">Liquidar semanas antes de viajar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ALIADOS ================= -->
+    <section class="section" id="aliados">
+      <div class="section__inner">
+        <h2 class="section__title">Nuestros Aliados</h2>
+
+        <!-- Aerolíneas -->
+        <p class="section__subtitle">Aerolíneas con las que trabajamos</p>
+        <div class="allies allies--airlines">
+          <div class="ally-card glass-card">
+            <svg class="ally-logo" viewBox="0 0 180 40"><text x="90" y="28" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="22" fill="#132C46">Volaris</text></svg>
+          </div>
+          <div class="ally-card glass-card">
+            <svg class="ally-logo" viewBox="0 0 180 40"><text x="90" y="28" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#e4002b">Viva</text><text x="122" y="28" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#132C46">Aerobus</text></svg>
+          </div>
+          <div class="ally-card glass-card">
+            <svg class="ally-logo" viewBox="0 0 180 40"><text x="90" y="28" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#003366">Aeroméxico</text></svg>
+          </div>
+          <div class="ally-card glass-card">
+            <svg class="ally-logo" viewBox="0 0 180 40"><text x="90" y="28" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#132C46">Magnicharters</text></svg>
+          </div>
+          <div class="ally-card glass-card">
+            <svg class="ally-logo" viewBox="0 0 180 40"><text x="90" y="28" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="18" fill="#0057b7">Sunwing</text></svg>
+          </div>
+          <div class="ally-card glass-card">
+            <svg class="ally-logo" viewBox="0 0 180 40"><text x="90" y="28" text-anchor="middle" font-family="'Inter',sans-serif" font-weight="700" font-size="16" fill="#132C46">TUI Airways</text></svg>
+          </div>
+        </div>
+
+        <!-- Hoteles -->
+        <p class="section__subtitle section__subtitle--mt">Cadenas hoteleras aliadas</p>
+        <div class="allies">
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Marriott.webp" alt="Marriott" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Hyatt.webp" alt="Hyatt" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Iberostar.webp" alt="Iberostar" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Hard-Rock.webp" alt="Hard Rock" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Palace-Resorts.webp" alt="Palace Resorts" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/WYNDHAM.webp" alt="Wyndham" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Melia.webp" alt="Melia" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Dreams-Resorts.webp" alt="Dreams" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Fiesta-Americana.webp" alt="Fiesta Americana" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Xcaret-Mexico.webp" alt="Xcaret" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Nickelodeon.webp" alt="Nickelodeon" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Oasis.webp" alt="Oasis" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Emporio.webp" alt="Emporio" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/El-Cid-Resorts.webp" alt="El Cid Resorts" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Sunscape.webp" alt="Sunscape" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Decameron.webp" alt="Decameron" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Crown-Paradise-Club.webp" alt="Crown Paradise Club" loading="lazy" />
+          <img src="https://lotustravel.com.mx/wp-content/uploads/2026/06/Catalonia.png" alt="Catalonia" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="section section--dark" id="contacto">
+      <div class="section__inner">
+        <h2 class="section__title">Contáctanos</h2>
+        <p class="section__subtitle">Estamos listos para planear tu próximo viaje</p>
+
+        <div class="contact-grid">
+          <div class="contact-card glass-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="contact-card__title">WhatsApp</h3>
+            <p class="contact-card__info">55 6602 2897</p>
+            <a href="https://wa.me/message/ATQHNZY6VSCGE1" class="btn-pill btn-pill--small" target="_blank" rel="noopener">Escribir</a>
+          </div>
+
+          <div class="contact-card glass-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="contact-card__title">Email</h3>
+            <p class="contact-card__info">contacto@lotustravel.com.mx</p>
+          </div>
+
+          <div class="contact-card glass-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="contact-card__title">Dirección</h3>
+            <p class="contact-card__info">Av 613 13, San Juan de Aragon V Secc, Gustavo A Madero, 07979, CDMX</p>
+          </div>
+
+          <div class="contact-card glass-card">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="contact-card__title">Horario</h3>
+            <p class="contact-card__info">Lun - Vie: 9am - 6pm<br />Sáb: 9am - 3pm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2026 Lotus Travel. Todos los derechos reservados.</p>
+      <div class="footer__social">
+        <a href="https://wa.me/message/ATQHNZY6VSCGE1" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        <a href="https://lotustravel.com.mx/blog/" target="_blank" rel="noopener" aria-label="Blog">Blog</a>
+        <a href="https://lotustravel.com.mx/contact/" target="_blank" rel="noopener" aria-label="Contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor"/></svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="js/main.js?v=8" defer></script>
+</body>
+</html>
